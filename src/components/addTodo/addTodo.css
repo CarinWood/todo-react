@@ -1,0 +1,56 @@
+form {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.outer-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.name-div, .task-div {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   margin-bottom: 10px;
+}
+
+
+.name-label {
+   color: var(--darkblue)
+}
+
+.task-input {
+    width: 280px;
+    padding: 4px 8px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.name-input {
+    width: 130px;
+    padding: 4px 8px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 4px 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 15px;
+    background-color: var(--orange);
+    color: white;
+    border: 1px solid var(--orange);
+    width: 130px;
+    margin-top: 8px;
+}

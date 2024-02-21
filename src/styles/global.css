@@ -1,0 +1,29 @@
+:root {
+    --lightblue: #c7eef5;
+    --turquoise: #8cd5de;
+    --darkturquoise: #55bdca;
+    --darkblue: #022249;
+    --orange: #f07c41;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url('../assets/Raleway-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    font-family: "raleway";
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: linear-gradient(var(--lightblue), var(--turquoise), var(--darkturquoise));
+}
