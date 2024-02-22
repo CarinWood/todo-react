@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./addTodo.css";
+import { TodoContext } from "../../contexts/TodoContext";
 
 const AddTodo = () => {
+  const {setTodos} = useContext(TodoContext)
   const [task, setTask] = useState("");
   const [name, setName] = useState("");
 
@@ -10,10 +12,15 @@ const AddTodo = () => {
     const todo = {
       task: task,
       name: name,
+      completed: false
     };
 
-    setName('')
-    setTask('')
+    setTodos((prevArray) => {
+        return [...prevArray, todo]
+    })
+
+    setName("");
+    setTask("");
   };
 
   return (

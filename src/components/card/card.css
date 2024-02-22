@@ -3,6 +3,7 @@
     border: 3px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 20px;
+    margin-top: 10px;
 }
 
 .bottom-card {
@@ -19,15 +20,18 @@
 }
 
 .card button {
-    width: 30px;
+    width: 35px;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     margin: 0px 5px;
     cursor: pointer;
+    background-color: var(--darkturquoise);
+    color: var(--darkblue);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
 .trash-icon {
@@ -36,4 +40,12 @@
 
 .check-icon {
     font-size: 18px;
+}
+
+.card button:active {
+    transform: translateY(3px);
+}
+
+.lined-through {
+    text-decoration: line-through;
 }
