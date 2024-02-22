@@ -54,3 +54,7 @@ form button {
     width: 130px;
     margin-top: 8px;
 }
+
+form button:active {
+    transform: translateY(3px);
+}
