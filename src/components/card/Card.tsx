@@ -10,9 +10,10 @@ type todoProps = {
   task: string;
   name: string;
   completed: boolean;
+  timeStamp: number;
 };
 
-const Card: FC<todoProps> = ({ task, name, completed }) => {
+const Card: FC<todoProps> = ({ task, name, completed, timeStamp }) => {
   const { todos, setTodos } = useContext(TodoContext);
   const [update, setUpdate] = useState(false);
   const [inputValue, setInputValue] = useState(task);
@@ -59,16 +60,17 @@ const Card: FC<todoProps> = ({ task, name, completed }) => {
   };
 
   const updateTask = () => {
-        setUpdate(false)
-        const updatedTodos = todos.map((todo) => {
-            if (todo.task === task) {
-              return { ...todo, task: inputValue };
-            }
-            return todo;
-          });
-          setTodos(updatedTodos);
+    setUpdate(false);
+    const updatedTodos = todos.map((todo) => {
+      if (todo.task === task) {
+        return { ...todo, task: inputValue };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
-  }
+  const formattedDateTime = new Date(timeStamp).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' });
 
   return (
     <>
@@ -80,7 +82,9 @@ const Card: FC<todoProps> = ({ task, name, completed }) => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button className="update-button" onClick={updateTask}>Update</button>
+          <button className="update-button" onClick={updateTask}>
+            Update
+          </button>
         </section>
       )}
       <div className="outer-card">
@@ -95,6 +99,7 @@ const Card: FC<todoProps> = ({ task, name, completed }) => {
             <p>
               <i>{name}</i>
             </p>
+            <p>{formattedDateTime}</p>
             <div className="button-area">
               <button onClick={toggleUpdateCard}>
                 <BsPencil className="pen-icon" />

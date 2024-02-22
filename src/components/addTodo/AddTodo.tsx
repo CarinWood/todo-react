@@ -9,10 +9,12 @@ const AddTodo = () => {
 
   const submitTodo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const currentTimeStamp = new Date().getTime();
     const todo = {
       task: task,
       name: name,
-      completed: false
+      completed: false,
+      timeStamp: currentTimeStamp 
     };
 
     setTodos((prevArray) => {

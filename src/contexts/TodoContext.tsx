@@ -9,6 +9,7 @@ type todoItem = {
   task: string;
   name: string;
   completed: boolean;
+  timeStamp: number
 };
 
 export const TodoContext = createContext({} as todoContext);

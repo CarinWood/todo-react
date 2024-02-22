@@ -10,7 +10,12 @@ const TodoList = () => {
       {todos.map((item, i) => {
         return (
           <div key={i}>
-            <Card task={item.task} name={item.name} completed={item.completed}/>
+            <Card 
+                task={item.task} 
+                name={item.name} 
+                completed={item.completed}
+                timeStamp={item.timeStamp}
+                />
           </div>
         );
       })}
