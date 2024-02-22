@@ -13,6 +13,11 @@ const Sorting = () => {
         const sortedTodos = [...todos].sort((a, b) => a.name.localeCompare(b.name));
         setTodos(sortedTodos);
       }
+
+      if (e.target.value === "date") {
+        const sortedTodos = [...todos].sort((a, b) => a.timeStamp - b.timeStamp);
+        setTodos(sortedTodos);
+      }
   };
 
   return (
