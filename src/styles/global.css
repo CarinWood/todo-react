@@ -25,5 +25,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 100px;
     background-image: linear-gradient(var(--lightblue), var(--turquoise), var(--darkturquoise));
 }

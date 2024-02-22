@@ -1,15 +1,16 @@
-import React from 'react'
-import AddTodo from '../components/addTodo/AddTodo'
-import TodoList from '../components/todoList/TodoList'
+import React from "react";
+import AddTodo from "../components/addTodo/AddTodo";
+import TodoList from "../components/todoList/TodoList";
+import Sorting from "../components/sorting/Sorting";
 
 const Home = () => {
   return (
     <>
-        <AddTodo/>
-        <TodoList/>
-
+      <AddTodo />
+      <Sorting />
+      <TodoList />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
